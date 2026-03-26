@@ -7,7 +7,7 @@
     "lng": 151.2878,
     "estuaryDistanceKm": 2.5,
     "estuaryName": "Middle Harbour Creek",
-    "waterNswGaugeId": "212015",
+    "waterNswGaugeId": null,
     "historicalIncidents": {
       "total": 8,
       "bull": 3,
@@ -79,7 +79,7 @@
     "lng": 151.7980,
     "estuaryDistanceKm": 0.5,
     "estuaryName": "Hunter River",
-    "waterNswGaugeId": "210001",
+    "waterNswGaugeId": "210010",
     "historicalIncidents": {
       "total": 12,
       "bull": 7,

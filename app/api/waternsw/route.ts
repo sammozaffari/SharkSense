@@ -32,8 +32,9 @@ export async function GET(req: NextRequest) {
   })
 
   try {
+    // Use .exe endpoint — .pl redirects and causes issues
     const res = await fetch(
-      `https://realtimedata.waternsw.com.au/cgi/webservice.pl?${params}`,
+      `https://realtimedata.waternsw.com.au/cgi/webservice.exe?${params}`,
       {
         headers: { 'User-Agent': 'SharkSense/1.0' },
       }
