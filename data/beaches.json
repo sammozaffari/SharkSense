@@ -1,0 +1,92 @@
+[
+  {
+    "id": "manly",
+    "name": "Manly Beach",
+    "shortName": "Manly",
+    "lat": -33.7969,
+    "lng": 151.2878,
+    "estuaryDistanceKm": 2.5,
+    "estuaryName": "Middle Harbour Creek",
+    "waterNswGaugeId": "212015",
+    "historicalIncidents": {
+      "total": 8,
+      "bull": 3,
+      "white": 4,
+      "lastIncidentDate": "2026-01-18",
+      "lastIncidentSpecies": "bull"
+    },
+    "baselineDischarge": 15
+  },
+  {
+    "id": "dee-why",
+    "name": "Dee Why Beach",
+    "shortName": "Dee Why",
+    "lat": -33.7500,
+    "lng": 151.2889,
+    "estuaryDistanceKm": 0.3,
+    "estuaryName": "Dee Why Lagoon",
+    "waterNswGaugeId": null,
+    "historicalIncidents": {
+      "total": 5,
+      "bull": 2,
+      "white": 3,
+      "lastIncidentDate": "2026-01-19",
+      "lastIncidentSpecies": "bull"
+    },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "nielsen-park",
+    "name": "Nielsen Park (Shark Beach)",
+    "shortName": "Nielsen Park",
+    "lat": -33.8518,
+    "lng": 151.2593,
+    "estuaryDistanceKm": 0.8,
+    "estuaryName": "Sydney Harbour (Parramatta River)",
+    "waterNswGaugeId": "212048",
+    "historicalIncidents": {
+      "total": 4,
+      "bull": 3,
+      "white": 0,
+      "lastIncidentDate": "2026-01-18",
+      "lastIncidentSpecies": "bull"
+    },
+    "baselineDischarge": 120
+  },
+  {
+    "id": "bondi",
+    "name": "Bondi Beach",
+    "shortName": "Bondi",
+    "lat": -33.8915,
+    "lng": 151.2767,
+    "estuaryDistanceKm": 8.0,
+    "estuaryName": "Minor stormwater outlets",
+    "waterNswGaugeId": null,
+    "historicalIncidents": {
+      "total": 6,
+      "bull": 1,
+      "white": 3,
+      "lastIncidentDate": "2009-02-11",
+      "lastIncidentSpecies": "white"
+    },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "newcastle",
+    "name": "Nobbys Beach, Newcastle",
+    "shortName": "Newcastle",
+    "lat": -32.9190,
+    "lng": 151.7980,
+    "estuaryDistanceKm": 0.5,
+    "estuaryName": "Hunter River",
+    "waterNswGaugeId": "210001",
+    "historicalIncidents": {
+      "total": 12,
+      "bull": 7,
+      "white": 4,
+      "lastIncidentDate": "2023-11-15",
+      "lastIncidentSpecies": "bull"
+    },
+    "baselineDischarge": 800
+  }
+]

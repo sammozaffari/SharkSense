@@ -1,0 +1,42 @@
+{
+  "description": "Simplified ASID data for pilot beaches. Source: Riley et al. (2022) Australian Shark-Incident Database, Nature Scientific Data.",
+  "lastUpdated": "2026-03",
+  "beaches": {
+    "manly": {
+      "incidents": [
+        { "date": "2026-01-18", "species": "bull", "activity": "surfing", "outcome": "injured", "notes": "Surfer lost leg. Heavy rainfall event." },
+        { "date": "2025-09-14", "species": "white", "activity": "surfing", "outcome": "injured", "notes": "Mercury Psillakis, nearby at Dee Why." },
+        { "date": "2009-03-14", "species": "white", "activity": "surfing", "outcome": "uninjured", "notes": "Board bitten." },
+        { "date": "2000-02-02", "species": "unknown", "activity": "swimming", "outcome": "injured", "notes": "" }
+      ]
+    },
+    "dee-why": {
+      "incidents": [
+        { "date": "2026-01-19", "species": "bull", "activity": "surfing", "outcome": "uninjured", "notes": "11-year-old board bitten. Heavy rainfall event." },
+        { "date": "2025-09-14", "species": "white", "activity": "surfing", "outcome": "fatal", "notes": "Mercury Psillakis. Fatal white shark attack." },
+        { "date": "2018-07-25", "species": "white", "activity": "surfing", "outcome": "uninjured", "notes": "" }
+      ]
+    },
+    "nielsen-park": {
+      "incidents": [
+        { "date": "2026-01-18", "species": "bull", "activity": "swimming", "outcome": "fatal", "notes": "Nico Antic (12yo). Bull shark in Sydney Harbour after heavy rain." },
+        { "date": "1963-01-28", "species": "bull", "activity": "swimming", "outcome": "injured", "notes": "Historical harbour attack." }
+      ]
+    },
+    "bondi": {
+      "incidents": [
+        { "date": "2009-02-11", "species": "white", "activity": "surfing", "outcome": "injured", "notes": "Navy diver Glenn Orgias." },
+        { "date": "1929-02-04", "species": "unknown", "activity": "swimming", "outcome": "fatal", "notes": "Historical." }
+      ]
+    },
+    "newcastle": {
+      "incidents": [
+        { "date": "2023-11-15", "species": "bull", "activity": "surfing", "outcome": "injured", "notes": "Bar Beach area." },
+        { "date": "2022-01-16", "species": "bull", "activity": "surfing", "outcome": "injured", "notes": "Near Hunter River mouth." },
+        { "date": "2015-02-09", "species": "white", "activity": "surfing", "outcome": "injured", "notes": "" },
+        { "date": "2014-12-28", "species": "bull", "activity": "spearfishing", "outcome": "injured", "notes": "" },
+        { "date": "2012-07-14", "species": "white", "activity": "surfing", "outcome": "injured", "notes": "" }
+      ]
+    }
+  }
+}
