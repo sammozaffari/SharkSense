@@ -43,7 +43,7 @@
     "lng": 151.2593,
     "estuaryDistanceKm": 0.8,
     "estuaryName": "Sydney Harbour (Parramatta River)",
-    "waterNswGaugeId": "212048",
+    "waterNswGaugeId": "213004",
     "historicalIncidents": {
       "total": 4,
       "bull": 3,
@@ -79,7 +79,7 @@
     "lng": 151.7980,
     "estuaryDistanceKm": 0.5,
     "estuaryName": "Hunter River",
-    "waterNswGaugeId": "210010",
+    "waterNswGaugeId": "210149",
     "historicalIncidents": {
       "total": 12,
       "bull": 7,
