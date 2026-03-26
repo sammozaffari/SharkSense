@@ -1,0 +1,79 @@
+[
+  {
+    "id": "sdl-manly-01",
+    "lat": -33.7960,
+    "lng": 151.2930,
+    "beachId": "manly",
+    "name": "Manly Beach South SMART Drumline"
+  },
+  {
+    "id": "sdl-manly-02",
+    "lat": -33.7940,
+    "lng": 151.2945,
+    "beachId": "manly",
+    "name": "Manly Beach North SMART Drumline"
+  },
+  {
+    "id": "sdl-deewhy-01",
+    "lat": -33.7505,
+    "lng": 151.2940,
+    "beachId": "dee-why",
+    "name": "Dee Why Beach SMART Drumline"
+  },
+  {
+    "id": "sdl-freshwater-01",
+    "lat": -33.7780,
+    "lng": 151.2950,
+    "beachId": null,
+    "name": "Freshwater Beach SMART Drumline"
+  },
+  {
+    "id": "sdl-bondi-01",
+    "lat": -33.8910,
+    "lng": 151.2820,
+    "beachId": "bondi",
+    "name": "Bondi Beach South SMART Drumline"
+  },
+  {
+    "id": "sdl-bondi-02",
+    "lat": -33.8890,
+    "lng": 151.2830,
+    "beachId": "bondi",
+    "name": "Bondi Beach North SMART Drumline"
+  },
+  {
+    "id": "sdl-newcastle-01",
+    "lat": -32.9195,
+    "lng": 151.8030,
+    "beachId": "newcastle",
+    "name": "Nobbys Beach SMART Drumline"
+  },
+  {
+    "id": "sdl-newcastle-02",
+    "lat": -32.9250,
+    "lng": 151.7980,
+    "beachId": "newcastle",
+    "name": "Newcastle Beach SMART Drumline"
+  },
+  {
+    "id": "sdl-stockton-01",
+    "lat": -32.9080,
+    "lng": 151.8100,
+    "beachId": null,
+    "name": "Stockton Beach SMART Drumline"
+  },
+  {
+    "id": "sdl-merewether-01",
+    "lat": -32.9480,
+    "lng": 151.7560,
+    "beachId": null,
+    "name": "Merewether Beach SMART Drumline"
+  },
+  {
+    "id": "sdl-dixonpark-01",
+    "lat": -32.9400,
+    "lng": 151.7680,
+    "beachId": null,
+    "name": "Dixon Park Beach SMART Drumline"
+  }
+]

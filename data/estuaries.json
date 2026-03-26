@@ -1,0 +1,113 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Middle Harbour Creek Mouth",
+        "beachId": "manly",
+        "type": "estuary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [151.2530, -33.8110],
+            [151.2560, -33.8105],
+            [151.2575, -33.8125],
+            [151.2570, -33.8145],
+            [151.2540, -33.8150],
+            [151.2525, -33.8130],
+            [151.2530, -33.8110]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dee Why Lagoon Outlet",
+        "beachId": "dee-why",
+        "type": "lagoon"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [151.2855, -33.7472],
+            [151.2878, -33.7470],
+            [151.2885, -33.7480],
+            [151.2880, -33.7492],
+            [151.2860, -33.7490],
+            [151.2855, -33.7472]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sydney Harbour Mouth (Parramatta River)",
+        "beachId": "nielsen-park",
+        "type": "estuary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [151.2500, -33.8370],
+            [151.2620, -33.8350],
+            [151.2700, -33.8390],
+            [151.2680, -33.8440],
+            [151.2560, -33.8450],
+            [151.2490, -33.8410],
+            [151.2500, -33.8370]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bondi Stormwater Outlets",
+        "beachId": "bondi",
+        "type": "stormwater"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [151.2730, -33.8910],
+            [151.2750, -33.8908],
+            [151.2755, -33.8920],
+            [151.2748, -33.8932],
+            [151.2728, -33.8930],
+            [151.2730, -33.8910]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hunter River Mouth",
+        "beachId": "newcastle",
+        "type": "estuary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [151.7790, -32.9170],
+            [151.7850, -32.9150],
+            [151.7910, -32.9170],
+            [151.7920, -32.9210],
+            [151.7860, -32.9240],
+            [151.7800, -32.9220],
+            [151.7790, -32.9170]
+          ]
+        ]
+      }
+    }
+  ]
+}

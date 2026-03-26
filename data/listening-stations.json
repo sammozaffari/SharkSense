@@ -1,0 +1,58 @@
+[
+  {
+    "id": "vr4g-bondi-01",
+    "lat": -33.8920,
+    "lng": 151.2820,
+    "nearestBeachId": "bondi",
+    "name": "Bondi Beach VR4G Listening Station"
+  },
+  {
+    "id": "vr4g-maroubra-01",
+    "lat": -33.9500,
+    "lng": 151.2620,
+    "nearestBeachId": "bondi",
+    "name": "Maroubra Beach VR4G Listening Station"
+  },
+  {
+    "id": "vr4g-manly-01",
+    "lat": -33.7980,
+    "lng": 151.2940,
+    "nearestBeachId": "manly",
+    "name": "Manly Beach VR4G Listening Station"
+  },
+  {
+    "id": "vr4g-deewhy-01",
+    "lat": -33.7510,
+    "lng": 151.2950,
+    "nearestBeachId": "dee-why",
+    "name": "Dee Why Beach VR4G Listening Station"
+  },
+  {
+    "id": "vr4g-redhead-01",
+    "lat": -32.9920,
+    "lng": 151.7180,
+    "nearestBeachId": "newcastle",
+    "name": "Redhead Beach VR4G Listening Station"
+  },
+  {
+    "id": "vr4g-newcastle-01",
+    "lat": -32.9280,
+    "lng": 151.7950,
+    "nearestBeachId": "newcastle",
+    "name": "Newcastle VR4G Listening Station"
+  },
+  {
+    "id": "vr4g-sydneyharbour-01",
+    "lat": -33.8420,
+    "lng": 151.2680,
+    "nearestBeachId": "nielsen-park",
+    "name": "Sydney Harbour VR4G Listening Station"
+  },
+  {
+    "id": "vr4g-coogee-01",
+    "lat": -33.9200,
+    "lng": 151.2600,
+    "nearestBeachId": "bondi",
+    "name": "Coogee Beach VR4G Listening Station"
+  }
+]
