@@ -57,13 +57,30 @@ export interface EnvironmentalData {
   marine: MarineData
   discharge: DischargeData
   sunMoon: SunMoonData
+  tideState?: 'low' | 'mid_rising' | 'high' | 'mid_falling'
+  detections?: SharkDetection[]
   fetchedAt: number
 }
 
 export interface DominantFactor {
-  type: 'rainfall' | 'discharge' | 'estuary' | 'temperature' | 'visibility' | 'time' | 'upwelling' | 'detection' | 'season' | 'historical'
+  type: 'rainfall' | 'discharge' | 'estuary' | 'temperature' | 'visibility' | 'time' | 'tidal_state' | 'upwelling' | 'detection' | 'season' | 'historical'
   reason: string
   weight: number
+}
+
+export interface RiskProjection {
+  day: string
+  level: RiskLevel
+  score: number
+}
+
+export interface SharkDetection {
+  id: string
+  lat: number
+  lng: number
+  species: SharkSpecies
+  timestamp: number
+  stationId: string
 }
 
 export interface RiskResult {

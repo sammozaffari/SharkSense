@@ -1,36 +1,33 @@
 # SharkSense
 
-Predictive shark risk intelligence platform for NSW ocean users. See `SHARKSENSE.md` for the full project brief.
+Predictive shark risk intelligence for NSW ocean users.
 
-## Quick Reference
+- **Product vision and requirements**: `SHARKSENSE.md`
+- **Technical implementation**: `BACKEND.md`
+- **Scraper documentation**: `docs/SCRAPING.md`
+- **Research findings**: `research/` (10 documents)
 
-### Stack
-- Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS v4
-- Mapbox GL JS for maps
-- SunCalc for sunrise/sunset/moon phase
-- Deployed on Vercel (free tier)
-- No backend database — client-side with localStorage caching
+## Quick Commands
 
-### Key Architectural Decisions
-- **Three risk levels only**: GREEN / AMBER / RED (traffic light)
-- **Species-specific branching**: Bull shark (rainfall-driven) and white shark (upwelling-driven) scored independently, final score = max of both
-- **Client-side data fetching** with 30-min localStorage cache
-- **WaterNSW proxy**: `/api/waternsw/route.ts` edge function because WaterNSW doesn't support CORS
-- **5 pilot beaches**: Manly, Dee Why, Nielsen Park, Bondi, Newcastle/Nobbys
-
-### APIs (all free, no keys except Mapbox)
-- Open-Meteo Weather: rainfall, temp, wind
-- Open-Meteo Marine: SST, waves, swell
-- WaterNSW: river discharge (via proxy)
-- SunCalc: client-side, no API
-
-### Risk Algorithm Weights
-**Bull shark**: rainfall 0.30, discharge 0.25, estuary proximity 0.15, temp 0.10, visibility 0.10, time-of-day 0.10
-**White shark**: upwelling 0.30, detection 0.20, temp 0.20, historical 0.15, season 0.15
-
-### Commands
 ```bash
-npm run dev     # Start dev server (Turbopack)
-npm run build   # Production build
-npm run lint    # ESLint
+npm run dev                                           # Frontend dev server
+npm run build                                         # Production build
+npm run test                                          # Run tests
+cd cli && node --import tsx src/index.ts scrape all   # Run all scrapers
+cd cli && node --import tsx src/index.ts db:status    # Check DB health
 ```
+
+## Architecture
+
+- Next.js 16 + React 19 + TypeScript + Tailwind v4
+- Supabase Postgres, Vercel deployment
+- 12 scrapers in `cli/`, 3 scheduled agents
+- Risk: GREEN (<0.33) / AMBER (0.33-0.63) / RED (>=0.63)
+- Species branching: bull (rainfall) vs white (upwelling), combined = max
+
+## Key Decisions
+
+- No authentication; public read via Supabase RLS
+- Scrapers write via service role key
+- Frontend falls back to direct API calls if DB data is stale
+- 5 pilot beaches: Manly, Dee Why, Nielsen Park, Bondi, Newcastle

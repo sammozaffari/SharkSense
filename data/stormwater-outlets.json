@@ -1,0 +1,90 @@
+[
+  {
+    "id": "sw-manly-boot",
+    "beachId": "manly",
+    "name": "Boot Factory Outlet",
+    "lat": -33.7985,
+    "lng": 151.2870,
+    "type": "major"
+  },
+  {
+    "id": "sw-manly-south",
+    "beachId": "manly",
+    "name": "Manly South Outlet",
+    "lat": -33.8005,
+    "lng": 151.2878,
+    "type": "minor"
+  },
+  {
+    "id": "sw-deewhy-lagoon",
+    "beachId": "dee-why",
+    "name": "Dee Why Lagoon Outlet",
+    "lat": -33.7505,
+    "lng": 151.2965,
+    "type": "major"
+  },
+  {
+    "id": "sw-deewhy-north",
+    "beachId": "dee-why",
+    "name": "Dee Why North Pipe",
+    "lat": -33.7468,
+    "lng": 151.2988,
+    "type": "minor"
+  },
+  {
+    "id": "sw-nielsen-vaucluse",
+    "beachId": "nielsen-park",
+    "name": "Vaucluse Stormwater",
+    "lat": -33.8518,
+    "lng": 151.2680,
+    "type": "minor"
+  },
+  {
+    "id": "sw-nielsen-shark",
+    "beachId": "nielsen-park",
+    "name": "Shark Beach Drain",
+    "lat": -33.8530,
+    "lng": 151.2690,
+    "type": "minor"
+  },
+  {
+    "id": "sw-bondi-south",
+    "beachId": "bondi",
+    "name": "Bondi South Outlet",
+    "lat": -33.8945,
+    "lng": 151.2740,
+    "type": "major"
+  },
+  {
+    "id": "sw-bondi-north",
+    "beachId": "bondi",
+    "name": "Bondi North Outlet",
+    "lat": -33.8880,
+    "lng": 151.2755,
+    "type": "minor"
+  },
+  {
+    "id": "sw-bondi-mid",
+    "beachId": "bondi",
+    "name": "Bondi Mid-Beach Pipe",
+    "lat": -33.8912,
+    "lng": 151.2748,
+    "type": "minor"
+  },
+  {
+    "id": "sw-newcastle-stockton",
+    "beachId": "newcastle",
+    "name": "Stockton Drain",
+    "lat": -32.9085,
+    "lng": 151.7870,
+    "type": "major"
+  },
+  {
+    "id": "sw-newcastle-nobbys",
+    "beachId": "newcastle",
+    "name": "Nobbys Outlet",
+    "lat": -32.9195,
+    "lng": 151.7925,
+    "type": "minor"
+  }
+]

@@ -24,7 +24,13 @@ npm-debug.log*
 
 # env files
 .env*.local
+cli/.env
+
+# cli build output
+cli/dist/
+cli/node_modules/
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.vercel

@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
-/* Hide scrollbar for horizontal beach switcher */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+@theme {
+  --color-risk-green: #34D399;
+  --color-risk-amber: #FBBF24;
+  --color-risk-red: #F87171;
 }
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+html {
+  scroll-behavior: smooth;
 }

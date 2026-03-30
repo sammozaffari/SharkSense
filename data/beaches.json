@@ -1,39 +1,171 @@
 [
   {
-    "id": "manly",
-    "name": "Manly Beach",
-    "shortName": "Manly",
-    "lat": -33.7969,
-    "lng": 151.2878,
-    "estuaryDistanceKm": 2.5,
-    "estuaryName": "Middle Harbour Creek",
+    "id": "palm-beach",
+    "name": "Palm Beach",
+    "shortName": "Palm Beach",
+    "lat": -33.5945,
+    "lng": 151.3235,
+    "estuaryDistanceKm": 0.8,
+    "estuaryName": "Pittwater",
     "waterNswGaugeId": null,
-    "historicalIncidents": {
-      "total": 8,
-      "bull": 3,
-      "white": 4,
-      "lastIncidentDate": "2026-01-18",
-      "lastIncidentSpecies": "bull"
-    },
-    "baselineDischarge": 15
+    "historicalIncidents": { "total": 1, "bull": 0, "white": 1, "lastIncidentDate": null, "lastIncidentSpecies": null },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "whale-beach",
+    "name": "Whale Beach",
+    "shortName": "Whale Beach",
+    "lat": -33.6115,
+    "lng": 151.3305,
+    "estuaryDistanceKm": 1.5,
+    "estuaryName": "Pittwater",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 0, "bull": 0, "white": 0, "lastIncidentDate": null, "lastIncidentSpecies": null },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "avalon",
+    "name": "Avalon Beach",
+    "shortName": "Avalon",
+    "lat": -33.6285,
+    "lng": 151.3340,
+    "estuaryDistanceKm": 1.0,
+    "estuaryName": "Pittwater / Careel Bay",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 1, "bull": 0, "white": 1, "lastIncidentDate": null, "lastIncidentSpecies": null },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "bilgola",
+    "name": "Bilgola Beach",
+    "shortName": "Bilgola",
+    "lat": -33.6430,
+    "lng": 151.3280,
+    "estuaryDistanceKm": 2.0,
+    "estuaryName": "Pittwater",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 0, "bull": 0, "white": 0, "lastIncidentDate": null, "lastIncidentSpecies": null },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "newport",
+    "name": "Newport Beach",
+    "shortName": "Newport",
+    "lat": -33.6555,
+    "lng": 151.3240,
+    "estuaryDistanceKm": 1.5,
+    "estuaryName": "Pittwater",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 0, "bull": 0, "white": 0, "lastIncidentDate": null, "lastIncidentSpecies": null },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "bungan",
+    "name": "Bungan Beach",
+    "shortName": "Bungan",
+    "lat": -33.6670,
+    "lng": 151.3210,
+    "estuaryDistanceKm": 2.5,
+    "estuaryName": "Bungan Creek",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 1, "bull": 1, "white": 0, "lastIncidentDate": "2026-02-01", "lastIncidentSpecies": "bull" },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "mona-vale",
+    "name": "Mona Vale Beach",
+    "shortName": "Mona Vale",
+    "lat": -33.6775,
+    "lng": 151.3120,
+    "estuaryDistanceKm": 1.5,
+    "estuaryName": "Narrabeen Lagoon (south arm)",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 0, "bull": 0, "white": 0, "lastIncidentDate": null, "lastIncidentSpecies": null },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "warriewood",
+    "name": "Warriewood Beach",
+    "shortName": "Warriewood",
+    "lat": -33.6880,
+    "lng": 151.3060,
+    "estuaryDistanceKm": 0.8,
+    "estuaryName": "Warriewood Wetlands / Narrabeen Lagoon",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 0, "bull": 0, "white": 0, "lastIncidentDate": null, "lastIncidentSpecies": null },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "narrabeen",
+    "name": "Narrabeen Beach",
+    "shortName": "Narrabeen",
+    "lat": -33.7095,
+    "lng": 151.3020,
+    "estuaryDistanceKm": 0.1,
+    "estuaryName": "Narrabeen Lagoon",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 1, "bull": 1, "white": 0, "lastIncidentDate": null, "lastIncidentSpecies": null },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "collaroy",
+    "name": "Collaroy Beach",
+    "shortName": "Collaroy",
+    "lat": -33.7310,
+    "lng": 151.3015,
+    "estuaryDistanceKm": 0.5,
+    "estuaryName": "Narrabeen Lagoon",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 0, "bull": 0, "white": 0, "lastIncidentDate": null, "lastIncidentSpecies": null },
+    "baselineDischarge": 0
   },
   {
     "id": "dee-why",
     "name": "Dee Why Beach",
     "shortName": "Dee Why",
-    "lat": -33.7500,
-    "lng": 151.2889,
-    "estuaryDistanceKm": 0.3,
+    "lat": -33.7510,
+    "lng": 151.2990,
+    "estuaryDistanceKm": 0.05,
     "estuaryName": "Dee Why Lagoon",
     "waterNswGaugeId": null,
-    "historicalIncidents": {
-      "total": 5,
-      "bull": 2,
-      "white": 3,
-      "lastIncidentDate": "2026-01-19",
-      "lastIncidentSpecies": "bull"
-    },
+    "historicalIncidents": { "total": 5, "bull": 2, "white": 3, "lastIncidentDate": "2026-01-19", "lastIncidentSpecies": "bull" },
     "baselineDischarge": 0
+  },
+  {
+    "id": "curl-curl",
+    "name": "Curl Curl Beach",
+    "shortName": "Curl Curl",
+    "lat": -33.7670,
+    "lng": 151.2960,
+    "estuaryDistanceKm": 0.15,
+    "estuaryName": "Curl Curl Lagoon",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 0, "bull": 0, "white": 0, "lastIncidentDate": null, "lastIncidentSpecies": null },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "freshwater",
+    "name": "Freshwater Beach",
+    "shortName": "Freshwater",
+    "lat": -33.7790,
+    "lng": 151.2935,
+    "estuaryDistanceKm": 0.5,
+    "estuaryName": "Queenscliff outlet / Manly Lagoon",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 1, "bull": 0, "white": 1, "lastIncidentDate": null, "lastIncidentSpecies": null },
+    "baselineDischarge": 0
+  },
+  {
+    "id": "manly",
+    "name": "Manly Beach",
+    "shortName": "Manly",
+    "lat": -33.7920,
+    "lng": 151.2890,
+    "estuaryDistanceKm": 0.05,
+    "estuaryName": "Manly Lagoon",
+    "waterNswGaugeId": null,
+    "historicalIncidents": { "total": 8, "bull": 3, "white": 4, "lastIncidentDate": "2026-01-18", "lastIncidentSpecies": "bull" },
+    "baselineDischarge": 15
   },
   {
     "id": "nielsen-park",
@@ -41,34 +173,22 @@
     "shortName": "Nielsen Park",
     "lat": -33.8518,
     "lng": 151.2593,
-    "estuaryDistanceKm": 0.8,
+    "estuaryDistanceKm": 0.0,
     "estuaryName": "Sydney Harbour (Parramatta River)",
     "waterNswGaugeId": "213004",
-    "historicalIncidents": {
-      "total": 4,
-      "bull": 3,
-      "white": 0,
-      "lastIncidentDate": "2026-01-18",
-      "lastIncidentSpecies": "bull"
-    },
+    "historicalIncidents": { "total": 4, "bull": 3, "white": 0, "lastIncidentDate": "2026-01-18", "lastIncidentSpecies": "bull" },
     "baselineDischarge": 120
   },
   {
     "id": "bondi",
     "name": "Bondi Beach",
     "shortName": "Bondi",
-    "lat": -33.8915,
-    "lng": 151.2767,
+    "lat": -33.8910,
+    "lng": 151.2785,
     "estuaryDistanceKm": 8.0,
     "estuaryName": "Minor stormwater outlets",
     "waterNswGaugeId": null,
-    "historicalIncidents": {
-      "total": 6,
-      "bull": 1,
-      "white": 3,
-      "lastIncidentDate": "2009-02-11",
-      "lastIncidentSpecies": "white"
-    },
+    "historicalIncidents": { "total": 6, "bull": 1, "white": 3, "lastIncidentDate": "2009-02-11", "lastIncidentSpecies": "white" },
     "baselineDischarge": 0
   },
   {
@@ -80,13 +200,7 @@
     "estuaryDistanceKm": 0.5,
     "estuaryName": "Hunter River",
     "waterNswGaugeId": "210149",
-    "historicalIncidents": {
-      "total": 12,
-      "bull": 7,
-      "white": 4,
-      "lastIncidentDate": "2023-11-15",
-      "lastIncidentSpecies": "bull"
-    },
+    "historicalIncidents": { "total": 12, "bull": 7, "white": 4, "lastIncidentDate": "2023-11-15", "lastIncidentSpecies": "bull" },
     "baselineDischarge": 800
   }
 ]

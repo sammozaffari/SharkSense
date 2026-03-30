@@ -1,0 +1,260 @@
+{
+  "version": "1.0",
+  "date": "2026-03-29",
+  "colour_thresholds": {
+    "green": { "min": 0.00, "max": 0.33, "label": "Low Risk" },
+    "amber": { "min": 0.34, "max": 0.62, "label": "Elevated Risk" },
+    "red":   { "min": 0.63, "max": 1.00, "label": "High Risk" }
+  },
+  "combined_score_method": "max(bull_score, white_score)",
+  "species_dominant_threshold": 0.15,
+  "bull_shark": {
+    "description": "Rainfall-driven, estuary-linked risk model for Carcharhinus leucas",
+    "seasonal_window": { "start_month": 10, "end_month": 5, "note": "October-May (extended from Nov-Apr per Lubitz 2025)" },
+    "core_factors": {
+      "rainfall": {
+        "weight": 0.30,
+        "description": "7-day cumulative catchment rainfall (mm)",
+        "confidence": "high",
+        "source": "Werry et al. 2018; Smoothey et al. 2023",
+        "scoring": {
+          "0":   0.0,
+          "1-24":  0.1,
+          "25-44": 0.3,
+          "45-74": 0.5,
+          "75-99": 0.7,
+          "100-149": 0.85,
+          "150+": 1.0
+        },
+        "decay": "Score halves every 3 days after rain stops"
+      },
+      "discharge": {
+        "weight": 0.22,
+        "description": "River discharge ratio to 30-day rolling median",
+        "confidence": "medium",
+        "source": "Matich et al. 2024; WaterNSW data",
+        "scoring": {
+          "<=1.0x": 0.0,
+          "1.0-1.5x": 0.2,
+          "1.5-2.0x": 0.4,
+          "2.0-3.0x": 0.6,
+          "3.0-5.0x": 0.8,
+          ">5.0x": 1.0
+        }
+      },
+      "estuary_proximity": {
+        "weight": 0.15,
+        "description": "Distance from beach to nearest estuary/river mouth (km)",
+        "confidence": "high",
+        "source": "Smoothey et al. 2023; SharkSmart 1km advisory",
+        "scoring": {
+          "<0.5km": 1.0,
+          "0.5-1km": 0.8,
+          "1-3km": 0.5,
+          "3-5km": 0.3,
+          ">5km": 0.1
+        },
+        "pilot_beach_values": {
+          "nielsen_park": 1.0,
+          "nobbys": 1.0,
+          "manly": 0.5,
+          "dee_why": 0.5,
+          "bondi": 0.1
+        }
+      },
+      "sst": {
+        "weight": 0.12,
+        "description": "Sea surface temperature (C) - seasonal gateway",
+        "confidence": "high",
+        "source": "Lubitz et al. 2025; Werry & Sumpton 2018",
+        "scoring": {
+          "<19C": 0.0,
+          "19-20C": 0.2,
+          "20-22C": 0.5,
+          "22-24C": 0.9,
+          "24-26C": 1.0,
+          ">26C": 0.9
+        }
+      },
+      "turbidity": {
+        "weight": 0.08,
+        "description": "Water visibility proxy (rainfall-derived or Beachwatch)",
+        "confidence": "medium",
+        "source": "Raoult 2026; Smoothey et al. 2023",
+        "scoring": {
+          "clear_no_rain_7d": 0.0,
+          "slight_15-44mm": 0.3,
+          "moderate_45-99mm": 0.6,
+          "severe_100mm+": 1.0
+        },
+        "clearing_time_days": "3-7 (midpoint 5, shortened to 3 if swell >1.5m)"
+      },
+      "time_of_day": {
+        "weight": 0.08,
+        "description": "Solar time risk multiplier",
+        "confidence": "medium",
+        "source": "Smoothey et al. 2023; Werry et al. 2019; ASID temporal data",
+        "scoring": {
+          "night": 0.7,
+          "dawn": 1.0,
+          "morning": 0.4,
+          "afternoon": 0.5,
+          "dusk": 1.0
+        }
+      },
+      "tidal_state": {
+        "weight": 0.05,
+        "description": "Tidal phase - NEW factor",
+        "confidence": "high",
+        "source": "Hammerschlag et al. 2006; Smoothey 2019",
+        "scoring": {
+          "low": 0.2,
+          "mid_rising": 0.5,
+          "high": 1.0,
+          "mid_falling": 0.6
+        }
+      }
+    },
+    "modifiers": {
+      "food_chain_cascade": {
+        "type": "multiplier",
+        "value": 1.2,
+        "trigger": "Confirmed baitfish/dolphin/seabird feeding activity within 500m",
+        "confidence": "medium",
+        "source": "Heithaus 2001; NSW Government advisory 2026"
+      },
+      "sewage_overflow": {
+        "type": "additive",
+        "value": 0.08,
+        "trigger": "Confirmed overflow in upstream catchment within 72 hours",
+        "confidence": "low",
+        "source": "NSW EPA; Sydney Water announcements"
+      },
+      "lunar_phase": {
+        "type": "additive",
+        "value": 0.05,
+        "trigger": "Lunar illumination > 75%",
+        "confidence": "medium",
+        "source": "French et al. 2021"
+      }
+    }
+  },
+  "white_shark": {
+    "description": "Upwelling-driven, migration-linked risk model for Carcharodon carcharias",
+    "seasonal_window": { "start_month": 5, "end_month": 11, "note": "May-November peak; September-November highest" },
+    "core_factors": {
+      "upwelling": {
+        "weight": 0.25,
+        "description": "SST anomaly vs 14-day rolling mean at beach site",
+        "confidence": "high",
+        "source": "Macquarie 2019; MEPS 2021; Bitemetrix methodology",
+        "scoring": {
+          "no_anomaly_+/-1C": 0.0,
+          "-1C_to_-2C": 0.3,
+          "-2C_to_-3C": 0.6,
+          "below_-3C": 1.0,
+          "inshore_below_17C": 1.0
+        }
+      },
+      "detection": {
+        "weight": 0.20,
+        "description": "Acoustic detection of tagged white shark",
+        "confidence": "high_for_presence",
+        "source": "SharkSmart NSW; IMOS; Afonso et al. 2017",
+        "scoring": {
+          "no_detection_72hrs": 0.0,
+          "within_100km_48hrs": 0.2,
+          "within_50km_24hrs": 0.6,
+          "within_10km_6hrs": 1.0
+        }
+      },
+      "sst_window": {
+        "weight": 0.18,
+        "description": "Absolute SST in white shark thermal preference range",
+        "confidence": "high",
+        "source": "MEPS 2021; ICES 2025",
+        "scoring": {
+          "<12C": 0.0,
+          "12-14C": 0.3,
+          "14-18C": 1.0,
+          "18-22C": 0.7,
+          "22-24C": 0.3,
+          ">24C": 0.1
+        }
+      },
+      "historical": {
+        "weight": 0.15,
+        "description": "Beach-specific historical white shark incident count from ASID",
+        "confidence": "medium",
+        "source": "Taronga ASID; Riley et al. 2022",
+        "scoring": {
+          "0_incidents": 0.0,
+          "1-2_incidents": 0.3,
+          "3-5_incidents": 0.6,
+          "6+_incidents": 1.0
+        }
+      },
+      "season": {
+        "weight": 0.12,
+        "description": "Migration calendar (day-of-year)",
+        "confidence": "high",
+        "source": "CSIRO tracking; Scientific Reports 2020",
+        "scoring": {
+          "dec-apr": 0.1,
+          "may-aug": 0.6,
+          "sep-nov": 1.0
+        }
+      },
+      "tidal_state": {
+        "weight": 0.10,
+        "description": "Tidal phase - NEW factor, highest importance for white shark predation",
+        "confidence": "high",
+        "source": "Hammerschlag et al. 2006 (2,546 attacks, 8 years, Seal Island SA)",
+        "scoring": {
+          "low": 0.1,
+          "mid_rising": 0.4,
+          "high": 1.0,
+          "mid_falling": 0.5
+        }
+      }
+    },
+    "modifiers": {
+      "seal_colony_proximity": {
+        "type": "multiplier",
+        "value": 1.2,
+        "trigger": "Beach within 50km of active seal haul-out AND month is September-November",
+        "confidence": "high",
+        "source": "NSW National Parks; Montague Island data",
+        "note": "Not active for current 5 pilot beaches (all >150km from Montague Island)"
+      },
+      "chlorophyll_a": {
+        "type": "additive",
+        "value": 0.05,
+        "trigger": "Chlorophyll-a > 1.5 mg/m3 (confirms upwelling bloom)",
+        "confidence": "high",
+        "source": "NASA MODIS; Copernicus CMEMS",
+        "note": "Requires new scraper - not available at MVP"
+      },
+      "lunar_phase": {
+        "type": "additive",
+        "value": 0.05,
+        "trigger": "Lunar illumination > 75%",
+        "confidence": "medium",
+        "source": "French et al. 2021"
+      }
+    }
+  },
+  "clearance_algorithm": {
+    "baseline_definition": "30-day rolling median discharge at nearest WaterNSW gauge",
+    "clearance_criteria": {
+      "discharge": "Returns to <=1.5x baseline for 24 consecutive hours",
+      "rainfall_lookback": "No >10mm rainfall in past 72 hours",
+      "rainfall_forecast": "No >25mm forecast in next 72 hours"
+    },
+    "turbidity_clearing_days": {
+      "default": 5,
+      "with_swell_above_1.5m": 3
+    },
+    "decay_model": "Rainfall score halves every 3 days; discharge tracks WaterNSW gauge in real-time"
+  }
+}

@@ -8,27 +8,30 @@ type FactorReasons = { [key: string]: (value: number) => string }
 
 const BULL_SHARK_REASONS: Record<keyof BullSharkFactors, (value: number) => string> = {
   rainfall: (v) => v >= 0.7
-    ? 'Heavy rain in catchment — bull sharks may be near shore'
-    : 'Recent rain increasing runoff — elevated bull shark risk',
+    ? 'Heavy rain recently — rain flushes sharks from rivers into the ocean near beaches'
+    : 'Some recent rain — runoff can draw sharks closer to shore',
   discharge: (v) => v >= 0.7
-    ? 'River discharge well above normal — bull sharks leaving rivers'
-    : 'River flow elevated after rain — increased bull shark activity',
-  estuary: () => 'Close to river mouth — bull sharks concentrate here after rain',
+    ? 'Rivers flowing well above normal — sharks leave rivers in large numbers after rain'
+    : 'River flow above normal after rain',
+  estuary: () => 'Near a lagoon or river outlet where sharks enter the ocean after rain',
   temperature: (v) => v >= 0.7
-    ? 'Warm water (24°C+) — peak bull shark activity conditions'
-    : 'Water temperature in bull shark active range',
-  visibility: () => 'Murky water conditions — bull sharks hunt by electroreception in low visibility',
-  time: () => 'Dawn/dusk period — sharks more active in low light',
+    ? 'Warm water makes bull sharks more active in this area'
+    : 'Water temperature is in the range where bull sharks are active',
+  visibility: () => 'Murky water — sharks can hunt by sensing electrical fields even when visibility is poor',
+  time: () => 'Dawn or dusk — sharks are more active in low light',
+  tidal_state: () => 'High tide — sharks can move closer to shore',
+  detection: () => 'A tagged shark was recently detected near this beach',
 }
 
 const WHITE_SHARK_REASONS: Record<keyof WhiteSharkFactors, (value: number) => string> = {
   upwelling: (v) => v >= 0.7
-    ? 'Cold water upwelling detected — attracts baitfish and white sharks'
-    : 'Possible upwelling event — monitor sea temperature',
-  temperature: () => 'Water temperature in white shark preferred range (15-22°C)',
+    ? 'Cold water pushing up from the deep — this attracts baitfish and the sharks that follow them'
+    : 'Possible cold water upwelling — this can attract sharks over the coming days',
+  temperature: () => 'Water temperature is in the range preferred by white sharks (14-22°C)',
   historical: () => 'This beach has a history of white shark encounters',
-  season: () => 'White shark migration season along the NSW coast',
-  detection: () => 'Tagged white shark recently detected in this area',
+  season: () => 'White sharks migrate through NSW waters this time of year',
+  detection: () => 'A tagged white shark was recently detected near this beach',
+  tidal_state: () => 'High tide — sharks can move into shallower water near shore',
 }
 
 export function getDominantFactor(
@@ -50,6 +53,8 @@ function findDominantBull(factors: BullSharkFactors): DominantFactor {
     ['temperature', factors.temperature, BULL_SHARK_WEIGHTS.temperature],
     ['visibility', factors.visibility, BULL_SHARK_WEIGHTS.visibility],
     ['time', factors.time, BULL_SHARK_WEIGHTS.time],
+    ['tidal_state', factors.tidal_state, BULL_SHARK_WEIGHTS.tidal_state],
+    ['detection', factors.detection, BULL_SHARK_WEIGHTS.detection],
   ]
   return pickDominant(entries, BULL_SHARK_REASONS as FactorReasons, factors as unknown as Record<string, number>)
 }
@@ -61,6 +66,7 @@ function findDominantWhite(factors: WhiteSharkFactors): DominantFactor {
     ['historical', factors.historical, WHITE_SHARK_WEIGHTS.historical],
     ['season', factors.season, WHITE_SHARK_WEIGHTS.season],
     ['detection', factors.detection, WHITE_SHARK_WEIGHTS.detection],
+    ['tidal_state', factors.tidal_state, WHITE_SHARK_WEIGHTS.tidal_state],
   ]
   return pickDominant(entries, WHITE_SHARK_REASONS as FactorReasons, factors as unknown as Record<string, number>)
 }
@@ -72,6 +78,7 @@ const TYPE_MAP: Record<string, DominantFactor['type']> = {
   temperature: 'temperature',
   visibility: 'visibility',
   time: 'time',
+  tidal_state: 'tidal_state',
   upwelling: 'upwelling',
   detection: 'detection',
   season: 'season',

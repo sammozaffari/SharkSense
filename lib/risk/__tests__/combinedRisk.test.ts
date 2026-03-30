@@ -80,7 +80,7 @@ describe('Risk Scoring Algorithm', () => {
       const result = calculateRisk(beach, env)
 
       expect(result.level).toBe('RED')
-      expect(result.score).toBeGreaterThanOrEqual(0.65)
+      expect(result.score).toBeGreaterThanOrEqual(0.63)
       expect(result.species).toBe('bull')
       expect(result.reason).toContain('rain')
     })
@@ -104,7 +104,7 @@ describe('Risk Scoring Algorithm', () => {
       const result = calculateRisk(beach, env)
 
       expect(result.level).toBe('GREEN')
-      expect(result.score).toBeLessThan(0.35)
+      expect(result.score).toBeLessThan(0.33)
     })
   })
 
@@ -129,7 +129,7 @@ describe('Risk Scoring Algorithm', () => {
       // White shark risk should dominate
       expect(result.whiteScore).toBeGreaterThan(result.bullScore)
       // Score should be at least AMBER
-      expect(result.score).toBeGreaterThanOrEqual(0.35)
+      expect(result.score).toBeGreaterThanOrEqual(0.33)
       expect(['AMBER', 'RED']).toContain(result.level)
     })
   })
@@ -152,8 +152,8 @@ describe('Risk Scoring Algorithm', () => {
       const result = calculateRisk(beach, env)
 
       expect(result.level).toBe('AMBER')
-      expect(result.score).toBeGreaterThanOrEqual(0.35)
-      expect(result.score).toBeLessThan(0.65)
+      expect(result.score).toBeGreaterThanOrEqual(0.33)
+      expect(result.score).toBeLessThan(0.63)
       expect(result.species).toBe('bull')
     })
   })
